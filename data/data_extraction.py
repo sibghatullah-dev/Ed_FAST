@@ -3,8 +3,10 @@ Data extraction module for EdFast application.
 Handles extraction of structured information from user descriptions and transcript data.
 """
 
-import streamlit as st
+import logging
 from config.constants import DEFAULT_DEGREE, DEFAULT_INSTITUTION, DEFAULT_LOCATION, DEFAULT_GRADUATION
+
+logger = logging.getLogger(__name__)
 
 
 def extract_info_from_description(description):
@@ -195,7 +197,7 @@ def extract_info_from_transcript(transcript_data):
             })
     
     except Exception as e:
-        st.error(f"Error extracting information from transcript: {str(e)}")
+        logger.error(f"Error extracting information from transcript: {str(e)}")
     
     # Convert skills set to list
     info['skills'] = list(info['skills'])

@@ -6,10 +6,12 @@ Handles ChromaDB initialization and management.
 import os
 import time
 import shutil
-import streamlit as st
+import logging
 import chromadb
 import psutil
 from config.constants import CHROMADB_PATH, COLLECTION_NAME, CHROMADB_TIMEOUT
+
+logger = logging.getLogger(__name__)
 
 
 def is_chromadb_running():
@@ -25,7 +27,7 @@ def is_chromadb_running():
                 pass
         return False
     except ImportError:
-        st.warning("psutil not installed. Cannot check for running ChromaDB processes.")
+        logger.warning("psutil not installed. Cannot check for running ChromaDB processes.")
         return False
 
 
@@ -33,23 +35,23 @@ def load_chroma_with_timeout(timeout=CHROMADB_TIMEOUT):
     """Load ChromaDB with timeout and error handling."""
     try:
         chromadb_path = os.path.join(os.getcwd(), CHROMADB_PATH)
-        st.info(f"Connecting to database at: {chromadb_path}")
+        logger.info(f"Connecting to database at: {chromadb_path}")
         
         # Ensure the directory exists and is empty
         if os.path.exists(chromadb_path):
             try:
                 shutil.rmtree(chromadb_path)
-                st.info("Removed existing ChromaDB directory")
+                logger.info("Removed existing ChromaDB directory")
             except Exception as e:
-                st.error(f"Error removing existing ChromaDB directory: {str(e)}")
+                logger.error(f"Error removing existing ChromaDB directory: {str(e)}")
                 return None
         
         # Create fresh directory
         try:
             os.makedirs(chromadb_path, exist_ok=True)
-            st.info("Created new ChromaDB directory")
+            logger.info("Created new ChromaDB directory")
         except Exception as e:
-            st.error(f"Error creating ChromaDB directory: {str(e)}")
+            logger.error(f"Error creating ChromaDB directory: {str(e)}")
             return None
         
         # Initialize client with settings
@@ -61,9 +63,9 @@ def load_chroma_with_timeout(timeout=CHROMADB_TIMEOUT):
                     allow_reset=True
                 )
             )
-            st.info("ChromaDB client created successfully")
+            logger.info("ChromaDB client created successfully")
         except Exception as e:
-            st.error(f"Error creating ChromaDB client: {str(e)}")
+            logger.error(f"Error creating ChromaDB client: {str(e)}")
             return None
         
         # Create collection with timeout
@@ -75,26 +77,26 @@ def load_chroma_with_timeout(timeout=CHROMADB_TIMEOUT):
                     name=COLLECTION_NAME,
                     metadata={"hnsw:space": "cosine"}
                 )
-                st.success("Successfully created new collection")
+                logger.info("Successfully created new collection")
                 return collection
             except Exception as e:
                 error_msg = str(e)
                 if "already exists" in error_msg.lower():
                     try:
                         collection = client.get_collection(name=COLLECTION_NAME)
-                        st.success("Successfully connected to existing collection")
+                        logger.info("Successfully connected to existing collection")
                         return collection
                     except Exception as get_error:
-                        st.error(f"Error getting existing collection: {str(get_error)}")
+                        logger.error(f"Error getting existing collection: {str(get_error)}")
                         return None
                 elif time.time() - start_time > timeout:
-                    st.error(f"Timed out while creating collection: {error_msg}")
+                    logger.error(f"Timed out while creating collection: {error_msg}")
                     return None
                 time.sleep(0.5)
                 
     except Exception as e:
-        st.error(f"Error loading ChromaDB: {str(e)}")
-        st.info("Please ensure you have write permissions in the directory.")
+        logger.error(f"Error loading ChromaDB: {str(e)}")
+        logger.info("Please ensure you have write permissions in the directory.")
         return None
 
 
@@ -106,5 +108,5 @@ def initialize_chromadb():
             os.makedirs(CHROMADB_PATH)
         return True
     except Exception as e:
-        st.error(f"Error initializing ChromaDB: {str(e)}")
+        logger.error(f"Error initializing ChromaDB: {str(e)}")
         return False 
