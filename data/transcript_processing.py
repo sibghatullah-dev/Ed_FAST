@@ -4,9 +4,11 @@ Handles transcript processing using Google's Gemini AI.
 """
 
 import json
-import streamlit as st
+import logging
 import google.generativeai as genai
 from config.constants import GEMINI_API_KEY, GEMINI_MODEL_NAME
+
+logger = logging.getLogger(__name__)
 
 
 def initialize_gemini_api():
@@ -17,7 +19,7 @@ def initialize_gemini_api():
             model = genai.GenerativeModel(GEMINI_MODEL_NAME)
             return model
         except Exception as e:
-            st.error(f"Error initializing Gemini API: {str(e)}")
+            logger.error(f"Error initializing Gemini API: {str(e)}")
             return None
     return None
 
@@ -73,7 +75,7 @@ def extract_transcript_with_gemini(image):
     """Extract transcript data from an image using Gemini."""
     model = initialize_gemini_api()
     if model is None:
-        st.error("Gemini API key is not set or invalid.")
+        logger.error("Gemini API key is not set or invalid.")
         return None
     
     try:
@@ -92,7 +94,7 @@ def extract_transcript_with_gemini(image):
         transcript_data = json.loads(extracted_text)
         return transcript_data
     except Exception as e:
-        st.error(f"Error processing transcript with Gemini: {str(e)}")
+        logger.error(f"Error processing transcript with Gemini: {str(e)}")
         return None
 
 
@@ -100,47 +102,34 @@ def generate_resume_content(transcript_data, user_description, existing_resume_d
     """Generate comprehensive resume content using transcript and description."""
     from data.data_extraction import extract_info_from_transcript, extract_info_from_description
     
-    # Check if we're in a Streamlit context
-    try:
-        import streamlit as st
-        in_streamlit = True
-    except:
-        in_streamlit = False
-    
-    def show_message(msg_type, message):
-        """Helper function to show messages in appropriate context."""
-        if in_streamlit:
-            try:
-                if msg_type == "info":
-                    st.info(message)
-                elif msg_type == "success":
-                    st.success(message)
-                elif msg_type == "warning":
-                    st.warning(message)
-                elif msg_type == "error":
-                    st.error(message)
-            except:
-                print(f"{msg_type.upper()}: {message}")
-        else:
-            print(f"{msg_type.upper()}: {message}")
+    def log_message(msg_type, message):
+        """Helper function to log messages."""
+        if msg_type == "info":
+            logger.info(message)
+        elif msg_type == "success":
+            logger.info(f"✅ {message}")
+        elif msg_type == "warning":
+            logger.warning(message)
+        elif msg_type == "error":
+            logger.error(message)
     
     model = initialize_gemini_api()
     if model is None:
-        show_message("error", "❌ Gemini AI API not available. Please check API configuration.")
+        log_message("error", "Gemini AI API not available. Please check API configuration.")
         return None
     
     try:
-        show_message("info", "📊 Extracting information from your data...")
+        log_message("info", "Extracting information from your data...")
         
         # Extract information from transcript
         transcript_info = extract_info_from_transcript(transcript_data) if transcript_data else {}
         if transcript_data:
-            show_message("success", f"✅ Extracted {len(transcript_info.get('skills', []))} skills from transcript")
+            log_message("success", f"Extracted {len(transcript_info.get('skills', []))} skills from transcript")
         
         # Extract information from description
         description_info = extract_info_from_description(user_description) if user_description else {}
         if user_description:
-            show_message("success", f"✅ Extracted {len(description_info.get('skills', []))} skills from description")
+            log_message("success", f"Extracted {len(description_info.get('skills', []))} skills from description")
         
         # Check if we have any data to work with
         if not transcript_info and not description_info:
@@ -164,7 +153,7 @@ def generate_resume_content(transcript_data, user_description, existing_resume_d
             'achievements': transcript_info.get('achievements', [])
         }
         
-        show_message("info", f"🔗 Combined {len(combined_info['skills'])} total skills for AI analysis")
+        log_message("info", f"Combined {len(combined_info['skills'])} total skills for AI analysis")
         
         # Create a prompt for generating resume content
         prompt = f"""
@@ -207,11 +196,11 @@ def generate_resume_content(transcript_data, user_description, existing_resume_d
         Return ONLY the JSON object without any explanation.
         """
         
-        show_message("info", "🤖 Sending request to AI...")
+        log_message("info", "Sending request to AI...")
         response = model.generate_content(prompt)
         response_text = response.text
         
-        show_message("success", "✅ AI response received, processing...")
+        log_message("success", "AI response received, processing...")
         
         # Clean up the response to ensure it's valid JSON
         if "```json" in response_text:
@@ -242,12 +231,12 @@ def generate_resume_content(transcript_data, user_description, existing_resume_d
         if 'course_highlights' not in resume_suggestions:
             resume_suggestions['course_highlights'] = []
         
-        show_message("success", "✅ AI suggestions processed successfully!")
+        log_message("success", "AI suggestions processed successfully!")
         return resume_suggestions
         
     except json.JSONDecodeError as e:
-        show_message("error", f"❌ JSON parsing error: {str(e)}")
-        show_message("error", "The AI response was not in valid JSON format. Providing fallback suggestions.")
+        log_message("error", f"JSON parsing error: {str(e)}")
+        log_message("error", "The AI response was not in valid JSON format. Providing fallback suggestions.")
         # Return a fallback response
         fallback_info = combined_info if 'combined_info' in locals() else {}
         return {
@@ -258,7 +247,7 @@ def generate_resume_content(transcript_data, user_description, existing_resume_d
             "course_highlights": []
         }
     except Exception as e:
-        show_message("error", f"❌ Error generating resume content: {str(e)}")
+        log_message("error", f"Error generating resume content: {str(e)}")
         # Return a fallback response with any available data
         fallback_skills = []
         fallback_achievements = []
