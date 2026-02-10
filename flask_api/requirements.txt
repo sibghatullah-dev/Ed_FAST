@@ -1,0 +1,27 @@
+# Flask API Requirements
+
+# Core Flask
+Flask>=3.0.0
+Flask-CORS>=4.0.0
+Flask-JWT-Extended>=4.5.0
+
+# Add to existing EdFast requirements
+# Install from parent directory: pip install -r ../requirements.txt
+
+# API specific
+python-dotenv>=1.0.0
+werkzeug>=3.0.0
+
+# File handling
+python-multipart>=0.0.6
+
+# LinkedIn Scraper Dependencies (for API)
+python-jobspy>=1.1.82
+selenium>=4.15.0
+google-api-python-client>=2.100.0
+google-auth>=2.23.0
+google-auth-oauthlib>=1.1.0
+google-auth-httplib2>=0.1.1
+pyperclip>=1.8.2
+
+

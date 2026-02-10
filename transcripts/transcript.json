@@ -1,0 +1,188 @@
+{
+    "transcript": {
+      "semesters": [
+        {
+          "term": "Fall 2021",
+          "summary": {
+            "credits_attempted": 17,
+            "credits_earned": 14,
+            "cgpa": 1.76,
+            "sgpa": 1.76
+          },
+          "courses": [
+            {
+              "code": "CLI000",
+              "name": "Introduction to Information and Communication Technology",
+              "section": "BDS-1U",
+              "credit_hours": 1,
+              "grade": "B-",
+              "points": 2.67,
+              "type": "Core",
+              "remarks": ""
+            },
+            {
+              "code": "CLI002",
+              "name": "Programming Fundamentals - Lab",
+              "section": "BDS-1U",
+              "credit_hours": 1,
+              "grade": "D+",
+              "points": 1.33,
+              "type": "Core",
+              "remarks": ""
+            },
+            {
+              "code": "CSI002",
+              "name": "Programming Fundamentals",
+              "section": "BDS-1U",
+              "credit_hours": 3,
+              "grade": "F",
+              "points": 0,
+              "type": "Core",
+              "remarks": ""
+            },
+            {
+              "code": "MTI003",
+              "name": "Calculus and Analytical Geometry",
+              "section": "BDS-1U",
+              "credit_hours": 3,
+              "grade": "C-",
+              "points": 1.67,
+              "type": "Core",
+              "remarks": ""
+            },
+            {
+              "code": "MTI004",
+              "name": "Linear Algebra",
+              "section": "BDS-1U",
+              "credit_hours": 3,
+              "grade": "D+",
+              "points": 1.33,
+              "type": "Core",
+              "remarks": ""
+            },
+            {
+              "code": "SLI004",
+              "name": "English Composition and Comprehension - Lab",
+              "section": "BDS-1U1",
+              "credit_hours": 1,
+              "grade": "B+",
+              "points": 3.33,
+              "type": "Core",
+              "remarks": ""
+            },
+            {
+              "code": "SSI003",
+              "name": "Pakistan Studies",
+              "section": "BDS-1U",
+              "credit_hours": 3,
+              "grade": "B",
+              "points": 3,
+              "type": "Core",
+              "remarks": ""
+            },
+            {
+              "code": "SSI004",
+              "name": "English Composition",
+              "section": "BDS-1U",
+              "credit_hours": 2,
+              "grade": "C+",
+              "points": 2.33,
+              "type": "Core",
+              "remarks": ""
+            }
+          ]
+        },
+        {
+          "term": "Spring 2022",
+          "summary": {
+            "credits_attempted": 30,
+            "credits_earned": 27,
+            "cgpa": 2.08,
+            "sgpa": 1.98
+          },
+          "courses": [
+            {
+              "code": "CLI002",
+              "name": "Programming Fundamentals - Lab",
+              "section": "BCS-2D",
+              "credit_hours": 1,
+              "grade": "C+",
+              "points": 2.33,
+              "type": "Core",
+              "remarks": "R-1"
+            },
+            {
+              "code": "CSI002",
+              "name": "Programming Fundamentals",
+              "section": "BCS-2D",
+              "credit_hours": 3,
+              "grade": "F",
+              "points": 0,
+              "type": "Core",
+              "remarks": "R-1"
+            },
+            {
+              "code": "EEI005",
+              "name": "Digital Logic Design",
+              "section": "BDS-2U",
+              "credit_hours": 3,
+              "grade": "C+",
+              "points": 2.33,
+              "type": "Core",
+              "remarks": ""
+            },
+            {
+              "code": "ELI005",
+              "name": "Digital Logic Design - Lab",
+              "section": "BDS-2U",
+              "credit_hours": 1,
+              "grade": "A-",
+              "points": 3.67,
+              "type": "Core",
+              "remarks": ""
+            },
+            {
+              "code": "MTI006",
+              "name": "Differential Equations",
+              "section": "BDS-2U",
+              "credit_hours": 3,
+              "grade": "D+",
+              "points": 1.33,
+              "type": "Core",
+              "remarks": ""
+            },
+            {
+              "code": "SLI008",
+              "name": "Communication and Presentation Skills - Lab",
+              "section": "BDS-2U2",
+              "credit_hours": 1,
+              "grade": "B",
+              "points": 3,
+              "type": "Core",
+              "remarks": ""
+            },
+            {
+              "code": "SSI002",
+              "name": "Islamic Studies/Ethics",
+              "section": "BDS-2U",
+              "credit_hours": 3,
+              "grade": "C+",
+              "points": 2.33,
+              "type": "Core",
+              "remarks": ""
+            },
+            {
+              "code": "SSI008",
+              "name": "Communication and Presentation Skills",
+              "section": "BDS-2U",
+              "credit_hours": 2,
+              "grade": "B+",
+              "points": 3.33,
+              "type": "Core",
+              "remarks": ""
+            }
+          ]
+        }
+      ]
+    }
+  }

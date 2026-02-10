@@ -1,0 +1,101 @@
+[
+  {
+    "post_id": "139c71b9-98c3-4406-ad15-51d2b8263758",
+    "title": "Welcome to PeerHub Testing",
+    "content": "This is my first discussion post to test the PeerHub functionality. I'm excited to connect with fellow students!",
+    "author_id": "b6b46ef8-f1ee-4ba8-b668-a479b93aca8a",
+    "tags": [
+      "testing",
+      "peerhub",
+      "welcome"
+    ],
+    "file_link": "",
+    "created_at": "2025-10-07T17:55:58.586165",
+    "updated_at": "2025-10-07T18:23:01.208945",
+    "upvotes": 0,
+    "downvotes": 0,
+    "comments_count": 1,
+    "is_pinned": false,
+    "is_deleted": false
+  },
+  {
+    "post_id": "96df2a25-0186-4e20-9359-04488eaa98dc",
+    "title": "hello peer hub",
+    "content": "this is a test comment. ",
+    "author_id": "b6b46ef8-f1ee-4ba8-b668-a479b93aca8a",
+    "tags": [
+      "test"
+    ],
+    "file_link": "",
+    "created_at": "2025-10-11T00:19:35.174546",
+    "updated_at": "2025-10-11T00:19:35.174546",
+    "upvotes": 0,
+    "downvotes": 0,
+    "comments_count": 0,
+    "is_pinned": false,
+    "is_deleted": false,
+    "course_code": "EL010",
+    "course_name": "Entrepreneurship",
+    "semester": 0
+  },
+  {
+    "post_id": "88ee3f50-3f82-4488-b08f-91881b647e99",
+    "title": "hello peer hub",
+    "content": "this is a test comment. ",
+    "author_id": "b6b46ef8-f1ee-4ba8-b668-a479b93aca8a",
+    "tags": [
+      "test"
+    ],
+    "file_link": "",
+    "created_at": "2025-10-11T00:19:40.367879",
+    "updated_at": "2025-10-11T00:19:40.367879",
+    "upvotes": 0,
+    "downvotes": 0,
+    "comments_count": 0,
+    "is_pinned": false,
+    "is_deleted": false,
+    "course_code": "EL010",
+    "course_name": "Entrepreneurship",
+    "semester": 0
+  },
+  {
+    "post_id": "b30d4df8-c737-4371-a6aa-83b177a446e2",
+    "title": "hello peer hub",
+    "content": "this is a test comment. ",
+    "author_id": "b6b46ef8-f1ee-4ba8-b668-a479b93aca8a",
+    "tags": [
+      "test"
+    ],
+    "file_link": "",
+    "created_at": "2025-10-11T00:25:39.398585",
+    "updated_at": "2025-10-11T00:25:39.398585",
+    "upvotes": 0,
+    "downvotes": 0,
+    "comments_count": 0,
+    "is_pinned": false,
+    "is_deleted": false,
+    "course_code": "EL009",
+    "course_name": "Cloud Computing",
+    "semester": 0
+  },
+  {
+    "post_id": "acdc1700-93b3-4e06-a23d-8f99b09f8086",
+    "title": "Course instructor",
+    "content": "Our course instructor is very good at teaching",
+    "author_id": "b6b46ef8-f1ee-4ba8-b668-a479b93aca8a",
+    "tags": [
+      "instructor"
+    ],
+    "file_link": "",
+    "created_at": "2025-10-11T00:26:41.054175",
+    "updated_at": "2025-10-11T00:26:41.054175",
+    "upvotes": 0,
+    "downvotes": 0,
+    "comments_count": 0,
+    "is_pinned": false,
+    "is_deleted": false,
+    "course_code": "EL009",
+    "course_name": "Cloud Computing",
+    "semester": 0
+  }
+]

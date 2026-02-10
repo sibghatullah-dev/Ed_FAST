@@ -1,0 +1,1 @@
+# Chat and AI interaction package for EdFast application 

@@ -1,0 +1,310 @@
+{
+  "program": "BS Computer Science",
+  "university": "National University of Computer and Emerging Sciences (FAST-NU)",
+  "study_plan": {
+    "semester_1": {
+      "total_credits": "13+3",
+      "courses": [
+        {
+          "code": "CL1000",
+          "name": "Introduction to Information and Communication Technology",
+          "credits": "0+1",
+          "prerequisite": "None"
+        },
+        {
+          "code": "CS1002",
+          "name": "Programming Fundamentals",
+          "credits": "3+1",
+          "prerequisite": "None"
+        },
+        {
+          "code": "NS1001",
+          "name": "Applied Physics",
+          "credits": "3+0",
+          "prerequisite": "None"
+        },
+        {
+          "code": "MT1003",
+          "name": "Calculus and Analytical Geometry",
+          "credits": "3+0",
+          "prerequisite": "None"
+        },
+        {
+          "code": "SS1012",
+          "name": "Functional English",
+          "credits": "2+1",
+          "prerequisite": "None"
+        },
+        {
+          "code": "SS1013",
+          "name": "Ideology and Constitution of Pakistan",
+          "credits": "2+0",
+          "prerequisite": "None"
+        }
+      ]
+    },
+    "semester_2": {
+      "total_credits": "13+3",
+      "courses": [
+        {
+          "code": "CS1004",
+          "name": "Object Oriented Programming",
+          "credits": "3+1",
+          "prerequisite": "CS1002 Programming Fundamentals"
+        },
+        {
+          "code": "EE1005",
+          "name": "Digital Logic Design",
+          "credits": "3+1",
+          "prerequisite": "None"
+        },
+        {
+          "code": "MT1006",
+          "name": "Multivariable Calculus",
+          "credits": "3+0",
+          "prerequisite": "MT1003 Calculus and Analytical Geometry"
+        },
+        {
+          "code": "SS1007",
+          "name": "Islamic Studies/Ethics",
+          "credits": "2+0",
+          "prerequisite": "None"
+        },
+        {
+          "code": "SS1014",
+          "name": "Expository Writing",
+          "credits": "2+1",
+          "prerequisite": "SS1012 Functional English"
+        }
+      ]
+    },
+    "semester_3": {
+      "total_credits": "16+2",
+      "courses": [
+        {
+          "code": "CS2001",
+          "name": "Data Structures",
+          "credits": "3+1",
+          "prerequisite": "CS1004 Object Oriented Programming"
+        },
+        {
+          "code": "EE2003",
+          "name": "Computer Organization and Assembly Language",
+          "credits": "3+1",
+          "prerequisite": "EE1005 Digital Logic Design"
+        },
+        {
+          "code": "CS1005",
+          "name": "Discrete Structures",
+          "credits": "3+0",
+          "prerequisite": "None"
+        },
+        {
+          "code": "MT1004",
+          "name": "Linear Algebra",
+          "credits": "3+0",
+          "prerequisite": "MT1003 Calculus and Analytical Geometry"
+        },
+        {
+          "code": "SS/MGxxxx",
+          "name": "SS/MG Elective - I",
+          "credits": "2+0",
+          "prerequisite": "None"
+        },
+        {
+          "code": "SS3002",
+          "name": "Civics and Community Engagement",
+          "credits": "2+0",
+          "prerequisite": "None"
+        }
+      ]
+    },
+    "semester_4": {
+      "total_credits": "15+3",
+      "courses": [
+        {
+          "code": "CS2005",
+          "name": "Database Systems",
+          "credits": "3+1",
+          "prerequisite": "CS2001 Data Structures"
+        },
+        {
+          "code": "CS2006",
+          "name": "Operating Systems",
+          "credits": "3+1",
+          "prerequisite": "CS2001 Data Structures, EE2003 Computer Organization and Assembly Language"
+        },
+        {
+          "code": "S2007",
+          "name": "Technical and Business Writing",
+          "credits": "3+0",
+          "prerequisite": "SS1014 Expository Writing"
+        },
+        {
+          "code": "MT2005",
+          "name": "Probability and Statistics",
+          "credits": "3+0",
+          "prerequisite": "MT1003 Calculus and Analytical Geometry"
+        },
+        {
+          "code": "SS/MGxxxx",
+          "name": "SS/MG Elective - II",
+          "credits": "3+0",
+          "prerequisite": "None"
+        },
+        {
+          "code": "CSxxxx",
+          "name": "Computing Internship",
+          "credits": "0+1",
+          "prerequisite": "None"
+        }
+      ]
+    },
+    "semester_5": {
+      "total_credits": "15+1",
+      "courses": [
+        {
+          "code": "CS3005",
+          "name": "Theory of Automata",
+          "credits": "3+0",
+          "prerequisite": "CS1005 Discrete Structures"
+        },
+        {
+          "code": "CS3001",
+          "name": "Computer Networks",
+          "credits": "3+1",
+          "prerequisite": "CS2006 Operating Systems"
+        },
+        {
+          "code": "CS3004",
+          "name": "CS Elective - I",
+          "credits": "3+0",
+          "prerequisite": "Varies by elective"
+        },
+        {
+          "code": "CS2009",
+          "name": "Design and Analysis of Algorithms",
+          "credits": "3+0",
+          "prerequisite": "CS2001 Data Structures, CS1005 Discrete Structures"
+        },
+        {
+          "code": "CSxxxx",
+          "name": "CS Elective - II",
+          "credits": "3+0",
+          "prerequisite": "Varies by elective"
+        }
+      ]
+    },
+    "semester_6": {
+      "total_credits": "15+1",
+      "courses": [
+        {
+          "code": "CS3009",
+          "name": "Software Engineering",
+          "credits": "3+0",
+          "prerequisite": "CS1004 Object Oriented Programming"
+        },
+        {
+          "code": "EE2013",
+          "name": "Computer Architecture",
+          "credits": "3+0",
+          "prerequisite": "EE2003 Computer Organization and Assembly Language"
+        },
+        {
+          "code": "CSxxxx",
+          "name": "CS Elective - III",
+          "credits": "3+0",
+          "prerequisite": "Varies by elective"
+        },
+        {
+          "code": "AI2002",
+          "name": "Artificial Intelligence",
+          "credits": "3+1",
+          "prerequisite": "CS2009 Design and Analysis of Algorithms, MT2005 Probability and Statistics"
+        },
+        {
+          "code": "CS3014",
+          "name": "Applied Human Computer Interaction",
+          "credits": "3+0",
+          "prerequisite": "None"
+        }
+      ]
+    },
+    "semester_7": {
+      "total_credits": "15+3",
+      "courses": [
+        {
+          "code": "CS4091",
+          "name": "Final Year Project-I",
+          "credits": "0+3",
+          "prerequisite": "Earned at least 92 credit hours and CGPA >= 2.0"
+        },
+        {
+          "code": "CS3002",
+          "name": "Information Security",
+          "credits": "3+0",
+          "prerequisite": "CS3001 Computer Networks"
+        },
+        {
+          "code": "CSxxxx",
+          "name": "CS Elective - IV",
+          "credits": "3+0",
+          "prerequisite": "Varies by elective"
+        },
+        {
+          "code": "CS4001",
+          "name": "Professional Practices",
+          "credits": "3+0",
+          "prerequisite": "None"
+        },
+        {
+          "code": "CS4031",
+          "name": "Compiler Construction",
+          "credits": "3+0",
+          "prerequisite": "CS3005 Theory of Automata, EE2003 Computer Organization and Assembly Language"
+        },
+        {
+          "code": "CS4081",
+          "name": "Parallel and Distributed Computing",
+          "credits": "3+0",
+          "prerequisite": "CS2006 Operating Systems, EE2013 Computer Architecture"
+        }
+      ]
+    },
+    "semester_8": {
+      "total_credits": "12+3",
+      "courses": [
+        {
+          "code": "CS4092",
+          "name": "Final Year Project-II",
+          "credits": "0+3",
+          "prerequisite": "CS4091 Final Year Project-I"
+        },
+        {
+          "code": "CS3002",
+          "name": "Entrepreneurship",
+          "credits": "3+0",
+          "prerequisite": "None"
+        },
+        {
+          "code": "CSxxxx",
+          "name": "CS Elective - V",
+          "credits": "3+0",
+          "prerequisite": "Varies by elective"
+        },
+        {
+          "code": "CSxxxx",
+          "name": "CS Elective - VI",
+          "credits": "3+0",
+          "prerequisite": "Varies by elective"
+        },
+        {
+          "code": "CS4087",
+          "name": "Advanced Database Management System",
+          "credits": "3+0",
+          "prerequisite": "CS2005 Database Systems"
+        }
+      ]
+    }
+  }
+}

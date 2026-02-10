@@ -1,0 +1,14 @@
+[
+  {
+    "comment_id": "2db20046-b7ad-422c-967a-6c8f8a4bab91",
+    "post_id": "139c71b9-98c3-4406-ad15-51d2b8263758",
+    "content": "hello peerhub testing",
+    "author_id": "b6b46ef8-f1ee-4ba8-b668-a479b93aca8a",
+    "parent_id": null,
+    "created_at": "2025-10-07T18:04:33.091844",
+    "updated_at": "2025-10-07T18:04:33.091844",
+    "upvotes": 1,
+    "downvotes": 0,
+    "is_deleted": false
+  }
+]
