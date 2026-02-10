@@ -37,14 +37,16 @@ app.config['REQUEST_TIMEOUT'] = 120  # 120 seconds timeout for long-running oper
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 # Initialize extensions
-# Allow both localhost (development) and dev tunnel domains
+# Allow localhost (development), dev tunnel domains, and Vercel production
 CORS(app, resources={
     r"/api/*": {
         "origins": [
             "http://localhost:3000", 
             "http://localhost:3001",
             "https://x7mq0j1w-3000.asse.devtunnels.ms",
-            "http://x7mq0j1w-3000.asse.devtunnels.ms"
+            "http://x7mq0j1w-3000.asse.devtunnels.ms",
+            "https://ed-fast-iyoe.vercel.app",
+            "https://ed-fast-iyoe-*.vercel.app"
         ],
         "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         "allow_headers": ["Content-Type", "Authorization", "Accept"],
